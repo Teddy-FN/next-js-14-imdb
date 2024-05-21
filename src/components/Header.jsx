@@ -6,6 +6,7 @@ import { BsFillInfoCircleFill } from "react-icons/bs";
 
 // Component
 import MenuItem from "./MenuItem";
+import DarkSwitchMode from "./DarkSwitchMode";
 
 export default function Header() {
   return (
@@ -14,12 +15,15 @@ export default function Header() {
         <MenuItem title="home" address="/" Icon={AiFillHome} />
         <MenuItem title="about" address="/about" Icon={BsFillInfoCircleFill} />
       </div>
-      <Link href="/" className="flex gap-1 items-center">
-        <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
-          IMDB
-        </span>
-        <span className="text-xl hidden sm:inline">Movies Clone</span>
-      </Link>
+      <div className="flex items-center gap-4">
+        <DarkSwitchMode />
+        <Link href="/" className="flex gap-1 items-center">
+          <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
+            IMDB
+          </span>
+          <span className="text-xl hidden sm:inline">Movies Clone</span>
+        </Link>
+      </div>
     </div>
   );
 }
