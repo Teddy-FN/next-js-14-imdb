@@ -4,7 +4,6 @@ import React from "react";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
 
 export default function Card({ item }) {
-  console.log(item);
   return (
     <div className="group cursor-pointer sm:hover:shadow-slate-400 sm:shadow-md rounded-lg sm:border sm:border-slate-400 sm:m-2 transition-shadow duration-200">
       <Link href={`/movies/${item.id}`}>
