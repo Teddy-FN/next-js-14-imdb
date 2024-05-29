@@ -3,14 +3,11 @@ const API_KEY = process.env.API_KEY;
 import Image from "next/image";
 
 export default async function MoviePage({ params }) {
-  console.log("PARAMS =>", params);
   const id = params.id;
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
   );
-  console.log("RES =>", res);
   const data = await res.json();
-  console.log("DATA =>", data);
   return (
     <div className="w-full">
       <div className="p-4 md:pt-8 flex flex-col md:flex-row content-center max-w-6xl mx-auto md:space-x-6">
